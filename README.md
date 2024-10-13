@@ -19,6 +19,8 @@ localstack start
 cd terraform/
 terraform init
 terraform apply
+
+terraform destroy ## to clean up
 ```
 
 Note:
