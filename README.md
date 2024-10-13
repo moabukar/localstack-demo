@@ -21,13 +21,6 @@ terraform init
 terraform apply
 ```
 
-## Verify
+Note:
 
-- Check the EC2 instance is running by visiting the public IP address provided in the Terraform output.
-- Check the S3 bucket by visiting the bucket name provided in the Terraform output.
-
-```bash
-curl http://<EC2_INSTANCE_IP>
-
-aws s3 ls --endpoint-url=http://localhost:4566 s3://<S3_BUCKET_NAME>
-```
+- Localstack resources are not real, so you cannot SSH into the EC2 instance or access the S3 bucket outside of LocalStack. They are there to verify that the Terraform & AWS code works as expected.
